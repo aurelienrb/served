@@ -83,7 +83,10 @@ ENABLE_STDCXX11 ()
 #
 # Enable warnings
 #
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -Wextra -Wno-missing-field-initializers")
+IF (MSVC)
+ELSE ()
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -Wextra -Wno-missing-field-initializers")
+ENDIF ()
 
 #
 # Configure Files
