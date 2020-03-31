@@ -25,6 +25,10 @@
 
 #include <sys/types.h> // size_t
 
+#ifdef ERROR
+#undef ERROR
+#endif
+
 namespace served {
 
 /*
